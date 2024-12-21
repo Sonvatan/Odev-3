@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ödev-3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <input id="sayi1" type="number"/>
+            <input id="sayi2" type="number"/>
+            <div class="button">
+                <button onclick="hesapla('topla')">+</button>
+                <button onclick="hesapla('cikar')">-</button>
+                <button onclick="hesapla('carp')">*</button>
+                <button onclick="hesapla('bol')">/</button>
+            </div>
+            <script>
+                function hesapla(islem) {
+                const sayi1 = parseFloat(document.getElementById("sayi1").value);
+                const sayi2 = parseFloat(document.getElementById("sayi2").value);
+                let sonuc = 0;
+
+                if (islem === "topla") {
+                    sonuc = sayi1 + sayi2;
+                } else if (islem === "cikar") {
+                    sonuc = sayi1 - sayi2;
+                } else if (islem === "carp") {
+                    sonuc = sayi1 * sayi2;
+                } else if (islem === "bol") {
+                    sonuc = sayi1 / sayi2;
+                }
+
+                document.getElementById("result").innerText = sonuc;
+            }
+            </script>
+                <div id="result" style="background-color: white; width: 150px; height: 40px; 
+                text-align: right; line-height: 40px; color: black; font-size: 20px;">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+
+
+
+       
+       
+
